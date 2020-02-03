@@ -1,6 +1,14 @@
-## Welcome to GitHub Pages
+## 钉钉Wehook自定义机器人群发信息
 
-You can use the [editor on GitHub](https://github.com/yzakzero/DingDing-Webhook/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+最近因特殊情况需要不断群发时间随日期变化的信息，之前一直依靠人工手动群发，且钉钉上的群发模块功能已无法满足，因此想运用钉钉自定义机器人解决这一问题。以后是本次案例要用到的工具：
+# Wehook机器人
+1. Webook
+2. 自定义关键词
+[关于Wehook机器人详细内容可见官方文档](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq) 
+#
+
+
+[editor on GitHub](https://github.com/yzakzero/DingDing-Webhook/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
