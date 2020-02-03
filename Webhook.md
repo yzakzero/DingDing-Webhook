@@ -1,8 +1,8 @@
 ## 钉钉Wehook自定义机器人群发信息
 
-最近因特殊情况需要定时群发随日期变化的信息，之前一直依靠人工手动群发，钉钉上的群发模块功能已无法满足，因此想运用钉钉自定义机器人解决这一问题,使用语言为Python。以下是本次案例要用到的工具：
-## Wehook机器人
-1. [Wehook官方文档](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq) 
+最近因特殊情况要求，需要每日定时群发大量信息，且该信息的内容每日均有所不同。目前这项工作依靠人工进行，然而该项工作的工作量就目前而言已超出人工所能处理的范围，因此想借用钉钉Webhook自定义机器人来代替人工处理这项工作。利用已封装好的包，可以直接使用python进行编写，以下是安装并使用钉钉Webhook自定义机器人所需要用到的工具列表：
+## Webhook机器人
+1. [Webhook官方文档](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq) 
 
 ## Python
 1. [DingtalkChatbot:Python封装库](https://github.com/yzakzero/DingtalkChatbot)
