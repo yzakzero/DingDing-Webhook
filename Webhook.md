@@ -1,6 +1,6 @@
 # 钉钉Webhook自定义机器人群发信息
 
-最近因特殊情况要求，需要每日定时群发大量信息，且该信息的内容每日均有所不同。目前这项工作依靠人工进行，然而该项工作的工作量就目前而言已超出人工所能处理的范围，因此想借用钉钉Webhook自定义机器人来代替人工处理这项工作。利用已封装好的包，可以直接使用python进行编写，以下是安装并使用钉钉Webhook自定义机器人所需要用到的工具列表：
+最近因特殊情况要求，需要每日定时群发大量信息，且该信息的内容每日均有所不同。目前这项工作依靠人工进行，然而该项工作的工作量就目前而言已超出人工所能处理的范围，因此想借用钉钉Webhook自定义机器人来代替人工处理这项工作。利用已封装好的包，可以直接使用python进行编写，以下是使用钉钉Webhook自定义机器人所需要相关参考链接：
 ### Webhook机器人
 1. [Webhook官方文档](https://ding-doc.dingtalk.com/doc#/serverapi2/qf2nxq) 
 
@@ -18,11 +18,42 @@
 2. [后台挂载/卸载](https://blog.csdn.net/yongh701/article/details/78378041)
 3. [系统当前时间获取](https://blog.csdn.net/m0_37556444/article/details/82910532)
 
+# 执行所需环境
+Macos,Linux,Finalshell,PycharmCE,钉钉桌面端
 
-## 常见错误
-1. curl命令未按官方文档操作
-2. 时间转用字符串保存
-3. 添加新的推送信息忘记在校验添加条件
+## 注意事项
+### curl命令
+一定要严格按照官方文档，将测试语句直接粘贴至控制台，然后复制对应的taken至‘=’后，否则有极大可能发生错误。
+
+
+
+
+### 时间未同步
+1. 使用了time.strftime("%m月%d日",time.localtime(time.time()))
+2. 未把时间参数放置def内
+```markdown
+import datetime
+from dingtalkchatbot.chatbot import DingtalkChatbot
+import time
+import schedule
+
+#wehook地址
+webhook = 'https://oapi.dingtalk.com/robot/send?access_token=xxx'
+#机器人初始化
+xiaoding = DingtalkChatbot(webhook)
+#datetime.now获取实时时间 time库只获取当前时间
+s = datetime.datetime.now().second
+
+def job1():
+  msg1=s.__str__()
+  xiaoding.send_text(msg1, is_at_all=1)
+
+#时间未刷新
+```
+### 添加新的推送信息忘记在校验添加条件
+在程序内部新建一条新语句时，应有限考虑
+
+### 同一定时任务未放在同一函数里进行编写
 
 
 ### Markdown
