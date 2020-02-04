@@ -8,7 +8,7 @@
 1. [DingtalkChatbot:Python封装库](https://github.com/yzakzero/DingtalkChatbot)
 2. [schedule 任务调度库](https://www.cnblogs.com/wanglinjie/p/9286338.html)
 3. [PyCharm安装及使用](https://blog.csdn.net/qq_40130759/article/details/79421242)
-
+4. [time库](https://www.runoob.com/python/python-date-time.html)
 ## FinalShell
 1. [Mac os环境安装](https://blog.csdn.net/iamlihongwei/article/details/96835576)
 2. [设置相关](https://jingyan.baidu.com/article/11c17a2cfff2eaf447e39d7c.html)
